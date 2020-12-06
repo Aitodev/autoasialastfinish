@@ -1,0 +1,136 @@
+{% extends 'wrapper.html' %}
+{% load static %}
+{% block title %}Форма{% endblock %}
+{% block content %}
+
+<body class="res layout-1">
+    
+    <div id="wrapper" class="wrapper-fluid banners-effect-5">
+    
+
+    {% include 'header.html' %}
+    
+	<!-- Main Container  -->
+	<div class="main-container container">
+		<ul class="breadcrumb">
+			<li><a href="checkout.html#"><i class="fa fa-home"></i></a></li>
+			<li><a href="checkout.html#">Checkout</a></li>
+			
+		</ul>
+		
+		<div class="row">
+			<!--Middle Part Start-->
+			<div id="content" class="col-sm-12">
+			  <h2 class="title">Checkout</h2>
+			  <div class="so-onepagecheckout row">
+				<div class="col-left col-sm-3">
+				  <div class="panel panel-default">
+					
+				  </div>
+				  <div class="panel panel-default">
+					  <div class="panel-body">
+					  	<form action="{% url 'cart:ordersend' %}" method="POST">
+							<fieldset id="account">
+								{% csrf_token %}
+							  <!-- <div class="form-group required">
+								<label for="input-payment-firstname" class="control-label">Имя</label>
+								<input type="text" class="form-control" id="input-payment-firstname" placeholder="Ваше имя" value="" name="name">
+							  </div> -->
+							  <!-- <div class="form-group required">
+								<label for="input-payment-email" class="control-label">Электронная почта</label>
+								<input type="text" class="form-control" id="input-payment-email" placeholder="Электронная почта" value="" name="mail">
+							  </div> -->
+							  <div class="form-group required">
+								<label for="input-payment-telephone" class="control-label">Номер телефона</label>
+								<input type="text" class="form-control" id="input-payment-telephone" placeholder="Телефон" value="" name="phone">
+							  </div>
+							</fieldset>
+							<div class="pull-right">
+								<input type="submit" class="btn btn-primary" id="button-confirm" value="Подтвердить">
+							  </div>
+						</form>
+						</div>
+				  </div>
+				  
+				</div>
+				<div class="col-right col-sm-9">
+				  <div class="row">
+					
+					
+					
+					
+					
+					<div class="col-sm-12">
+					  <div class="panel panel-default">
+						<div class="panel-heading">
+						  <h4 class="panel-title"><i class="fa fa-shopping-cart"></i> Shopping cart</h4>
+						</div>
+						  <div class="panel-body">
+							<div class="table-responsive">
+							  <table class="table table-bordered">
+								<thead>
+								  <tr>
+									<td class="text-center">Image</td>
+									<td class="text-left">Bestproduct Name</td>
+									<td class="text-left">Quantity</td>
+									<td class="text-right">Unit Price</td>
+									<td class="text-right">Total</td>
+								  </tr>
+								</thead>
+								<tbody>
+								{% if cart %}
+                        		{% for item in cart %}
+                            	{% with product=item.product %}
+								  <tr>
+									<td class="text-center"><a href="product.html">
+										{% if product.img %}
+										<img width="60px" src="{{ product.img.url }}" alt="Xitefun Causal Wear Fancy Shoes" title="Xitefun Causal Wear Fancy Shoes" class="img-thumbnail">
+										{% endif %}
+									</a></td>
+									<td class="text-left"><a href="product.html">{{ product.name }}	</a></td>
+									<td class="text-left"><div class="input-group btn-block" style="min-width: 100px;">
+										<input type="text" name="quantity" value="1" size="1" class="form-control">
+										<span class="input-group-btn">
+										<button type="submit" data-toggle="tooltip" title="Update" class="btn btn-primary"><i class="fa fa-refresh"></i></button>
+										<button type="button" data-toggle="tooltip" title="Remove" class="btn btn-danger" onClick=""><i class="fa fa-times-circle"></i></button>
+										</span></div></td>
+									<td class="text-right">{{ item.price }} сомов</td>
+									<td class="text-right">{{ item.total_price }} сомов</td>
+								  </tr>
+								  		{% endwith %}
+			                        {% endfor %}
+			                    {% else %}
+			                        <td colspan="6" class="product-price-cart"><span class="amount">Корзина пуста.</span>
+			                    {% endif %}
+								</tbody>
+								<tfoot>
+								  <tr>
+									<td class="text-right" colspan="4"><strong>Общая сумма:</strong></td>
+									<td class="text-right">{{ cart.get_total_price }}</td>
+								  </tr>
+								 
+								</tfoot>
+							  </table>
+							  <div class="buttons">
+							</div>
+							</div>
+						  </div>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<!--Middle Part End -->
+			
+		</div>
+	</div>
+	<!-- //Main Container -->
+	
+	{% include 'footer.html' %}
+
+    </div>
+	
+
+		
+{% endblock %} 

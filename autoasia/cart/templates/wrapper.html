@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Basic page needs
+    ============================================ -->
+    <title>{% block title %}TITLE NOT FOUND{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="html5 template, best html5 template, best html template, html5 basic template, multipurpose html5 template, multipurpose html template, creative html templates, creative html5 templates" />
+    <meta name="description" content="SuperMarket is a powerful Multi-purpose HTML5 Template with clean and user friendly design. It is definite a great starter for any eCommerce web project." />
+    <meta name="author" content="Magentech">
+    <meta name="robots" content="index, follow" />
+   
+    <!-- Mobile specific metas
+    ============================================ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- Favicon
+    ============================================ -->
+    <link rel="shortcut icon" type="image/png" href="{% static 'ico/favicon-16x16.png' %}"/>
+  
+   
+    <!-- Libs CSS
+    ============================================ -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap/css/bootstrap.min.css' %}">
+    <link href="{% static 'css/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'js/datetimepicker/bootstrap-datetimepicker.min.css' %}" rel="stylesheet">
+    <link href="{% static 'js/owl-carousel/owl.carousel.css' %}" rel="stylesheet">
+    <link href="{% static 'css/themecss/lib.css' %}" rel="stylesheet">
+    <link href="{% static 'js/jquery-ui/jquery-ui.min.css' %}" rel="stylesheet">
+    <link href="{% static 'js/minicolors/miniColors.css' %}" rel="stylesheet">
+    
+    <link href="{% static 'js/pe-icon-7-stroke/css/pe-icon-7-stroke.css' %}" rel="stylesheet">
+    <link href="https://demo.smartaddons.com/templates/html/autoparts/pe-icon-7-stroke/css/helper.css" rel="stylesheet">
+
+    <!-- Theme CSS
+    ============================================ -->
+    <link href="{% static 'css/themecss/so_searchpro.css' %}" rel="stylesheet">
+    <link href="{% static 'css/themecss/so_megamenu.css' %}" rel="stylesheet">
+    <link href="{% static 'css/themecss/so_advanced_search.css' %}" rel="stylesheet">
+    <link href="{% static 'css/themecss/so-listing-tabs.css' %}" rel="stylesheet">
+    <link href="{% static 'css/themecss/so-categories.cs' %}s" rel="stylesheet">
+    <link href="{% static 'css/themecss/so-newletter-popup.css' %}" rel="stylesheet">
+    <link href="{% static 'css/themecss/so-latest-blog.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/footer/footer1.css' %}" rel="stylesheet">
+    <link href="{% static 'css/header/header1.css' %}" rel="stylesheet">
+    <link id="color_scheme" href="{% static 'css/theme.css' %}" rel="stylesheet"> 
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/c8e4d183c2.js' crossorigin="anonymous"></script>
+
+     <!-- Google web fonts
+    ============================================ -->
+    <link href='https://fonts.googleapis.com/css?family=Rubik:300,400,400i,500,600,700' rel='stylesheet' type='text/css'>     
+    <style type="text/css">
+         body{font-family:'Rubik', sans-serif;}
+    </style>
+
+</head>
+{% block content %}
+
+{% endblock %}
+<!-- Include Libs & Plugins
+============================================ -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="{% static 'js/jquery-2.2.4.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/owl-carousel/owl.carousel.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/slick-slider/slick.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/themejs/libs.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/unveil/jquery.unveil.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/countdown/jquery.countdown.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/datetimepicker/moment.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/datetimepicker/bootstrap-datetimepicker.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery-ui/jquery-ui.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/modernizr/modernizr-2.6.2.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/minicolors/jquery.miniColors.min.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'js/lightslider/lightslider.js' %}"></script>
+
+<!-- Theme files
+============================================ -->
+
+<script type="text/javascript" src="{% static 'js/themejs/application.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'js/themejs/homepage.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'js/themejs/toppanel.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/themejs/so_megamenu.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/themejs/addtocart.js' %}"></script>  
+
+<!-- <script type="text/javascript" src="js/themejs/cpanel.js"></script> -->
+
+</html>

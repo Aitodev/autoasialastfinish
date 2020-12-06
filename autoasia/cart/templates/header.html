@@ -1,0 +1,750 @@
+{% load static %}
+<!-- Header Container  -->
+    <header id="header" class=" typeheader-1">
+        
+        <!-- Header Top -->
+        <div class="header-top hidden-compact"> 
+            <div class="container">
+                <div class="row">
+                    <div class="header-top-left col-lg-3 col-md-4 col-sm-5 hidden-xs">           
+                        <div class="telephone " >
+                            <ul class="socials">
+                                <li class="facebook"><a href="https://www.facebook.com/autoasia.kg" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                <li class="phone"><a href="tel:+9960505888181" target="_blank"><i class="fa fa-phone"></i></a></li>
+                                <li class="whatsapp"><a href="https://wa.me/+9960505888181" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+                                <li class="instagram"><a href="https://www.instagram.com/autoasiakg/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div>   
+                    </div>    
+                </div>
+            </div>      
+        </div>
+        <div class="header-middle hidden-compact">
+            <div class="container">
+                <div class="row">           
+                    <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
+                        <div class="logo">
+                            <a href="index.html"><img src="{% static 'image/catalog/logo.png' %}" title="Your Store" alt="Your Store" /></a>
+                        </div>
+                        
+                    </div>
+                    <div class="col-lg-9 col-md-8 col-sm-12 col-xs-12 middle-right">
+                        <div class="search-header-w">
+                            <div class="icon-search hidden-lg hidden-md"><i class="fa fa-search"></i></div>                                
+                              
+                            <div id="sosearchpro" class="sosearchpro-wrapper so-search ">
+                                <form method="GET" action="index.html">
+                                    <div id="search0" class="search input-group form-group">
+                                        <div class="select_category filter_type  icon-select hidden-sm hidden-xs">
+                                            <select class="no-border" name="category_id">
+                                                <option value="0">Все категории</option>
+                                                <option value="78">Мерседес</option>
+                                                <option value="77">Toyota</option>
+                                                <option value="82">Lexus</option>
+                                                <option value="82">Mazda</option>
+                                                <option value="82">Land Rover</option>
+                                                <option value="82">Opel</option>
+                                                <option value="82">Ford</option>
+                                                <option value="82">Infiniti</option>
+                                                <option value="82">Porsche</option>
+                                                <option value="82">Acura</option>
+                                                <option value="82">Daewoo</option>
+                                                <option value="82">Hyundai</option>
+                                                <option value="82">Chevrolet</option>
+                                                <option value="82">Ravon</option>
+                                                <option value="82">Kia</option>
+                                                <option value="82">Renault</option>
+                                                <option value="80">Audi</option>
+                                                <option value="81">Nissan</option>
+                                                <option value="79">BMW</option>
+                                                <option value="20">Subaru</option>
+                                                <option value="76">Mitsubishi</option>
+                                                <option value="26">Honda</option>
+                                                <option value="27">Volkswagen</option>
+                                            </select>
+                                        </div>
+
+                                        <input class="autosearch-input form-control" type="text" value="" size="50" autocomplete="off" placeholder="Поиск..." name="search">
+                                
+                                        <button type="submit" class="button-search btn btn-primary" name="submit_search"><i class="fa fa-search"></i></button>
+                                    
+                                    </div>
+                                    <input type="hidden" name="route" value="product/search" />
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="shopping_cart">
+                            <div id="cart" class="btn-shopping-cart">
+
+                                <a href="javascript:void(0)" data-loading-text="Loading... " class="btn-group top_cart dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                    <div class="shopcart">
+                                        <span class="icon-c">
+                                            <i class="fa fa-shopping-basket"></i>
+                                        </span>
+                                        <div class="shopcart-inner">
+                                            <p class="text-shopping-cart">
+                                                Корзина
+                                            </p>
+
+                                            <span class="total-shopping-cart cart-total-full">
+                                            <span class="items_cart">02</span><span class="items_cart2"> item(s)</span><span class="items_carts">5500сом</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <!-- <ul class="dropdown-menu pull-right shoppingcart-box" role="menu">
+                                    <li>
+                                        <table class="table table-striped">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center" style="width:70px">
+                                                        <a href="product.html">
+                                                            <img src="image/catalog/demo/product/80/1.jpg" style="width:70px" alt="Yutculpa ullamcon" title="Yutculpa ullamco" class="preview">
+                                                        </a>
+                                                    </td>
+                                                    <td class="text-left"> <a class="cart_product_name" href="product.html">Yutculpa ullamco</a> 
+                                                    </td>
+                                                    <td class="text-center">x1</td>
+                                                    <td class="text-center">$80.00</td>
+                                                    <td class="text-right">
+                                                        <a href="product.html" class="fa fa-edit"></a>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <a onclick="cart.remove('2');" class="fa fa-times fa-delete"></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center" style="width:70px">
+                                                        <a href="product.html">
+                                                            <img src="image/catalog/demo/product/80/2.jpg" style="width:70px" alt="Xancetta bresao" title="Xancetta bresao" class="preview">
+                                                        </a>
+                                                    </td>
+                                                    <td class="text-left"> <a class="cart_product_name" href="product.html">Xancetta bresao</a> 
+                                                    </td>
+                                                    <td class="text-center">x1</td>
+                                                    <td class="text-center">3700сом</td>
+                                                    <td class="text-right">
+                                                        <a href="product.html" class="fa fa-edit"></a>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <a onclick="cart.remove('1');" class="fa fa-times fa-delete"></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <table class="table table-bordered">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-left"><strong>Sub-Total</strong>
+                                                        </td>
+                                                        <td class="text-right">$140.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-left"><strong>Eco Tax (-2.00)</strong>
+                                                        </td>
+                                                        <td class="text-right">$2.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-left"><strong>VAT (20%)</strong>
+                                                        </td>
+                                                        <td class="text-right">$20.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-left"><strong>Total</strong>
+                                                        </td>
+                                                        <td class="text-right">$162.00</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p class="text-right"> <a class="btn view-cart" href="cart.html"><i class="fa fa-shopping-cart"></i>View Cart</a>&nbsp;&nbsp;&nbsp; <a class="btn btn-mega checkout-cart" href="checkout.html"><i class="fa fa-share"></i>Checkout</a> 
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-bottom hidden-compact"> 
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <div class="menu-vertical-w">   
+                            <div class="responsive so-megamenu megamenu-style-dev ">
+                                <div class="so-vertical-menu ">
+                                    <nav class="navbar-default">    
+                                        
+                                        <div class="container-megamenu vertical">
+                                            <div id="menuHeading">
+                                                <div class="megamenuToogle-wrapper">
+                                                    <div class="megamenuToogle-pattern">
+                                                        <div class="container">
+                                                            <div>
+                                                                <span></span>
+                                                                <span></span>
+                                                                <span></span>
+                                                            </div>
+                                                            Все категории                         
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                         
+                                            <div class="navbar-header">
+                                                <button type="button" id="show-verticalmenu" data-toggle="collapse" class="navbar-toggle">      
+                                                    <i class="fa fa-bars"></i>
+                                                    <span>Все категории</span>
+                                                </button>
+                                            </div>
+                                            <div class="vertical-wrapper" >
+                                                <span id="remove-verticalmenu" class="fa fa-times"></span>
+                                                <div class="megamenu-pattern">
+                                                    <div class="container-mega">
+                                                        <ul class="megamenu">
+                                                            <li class="item-vertical  with-sub-menu hover">
+                                                                <p class="close-menu"></p>
+                                                                <a href="index.html#" class="clearfix">                                                                    
+                                                                    <span>Lighting</span>
+                                                                    <b class="fa-angle-right"></b>
+                                                                </a>
+                                                                <div class="sub-menu" data-subwidth="60"  >
+                                                                    <div class="content" >
+                                                                        <div class="row">
+                                                                            <div class="col-sm-12">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-4 static-menu">
+                                                                                        <div class="menu">
+                                                                                            <ul>
+                                                                                                <li>
+                                                                                                    <a href="index.html#"  class="main-menu">Apparel</a>
+                                                                                                    <ul>
+                                                                                                        <li><a href="index.html#" >Accessories for Tablet PC</a></li>
+                                                                                                        <li><a href="index.html#" >Accessories for i Pad</a></li>
+                                                                                                        <li><a  href="index.html#" >Accessories for iPhone</a></li>
+                                                                                                        <li><a href="index.html#" >Bags, Holiday Supplies</a></li>
+                                                                                                        <li><a href="index.html#" >Car Alarms and Security</a></li>
+                                                                                                        <li><a href="index.html#" >Car Audio &amp; Speakers</a></li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                                <li>
+                                                                                                    <a href="index.html#"  class="main-menu">Cables &amp; Connectors</a>
+                                                                                                    <ul>
+                                                                                                        <li><a href="index.html#" >Cameras &amp; Photo</a></li>
+                                                                                                        <li><a href="index.html#" >Electronics</a></li>
+                                                                                                        <li><a href="index.html#" >Outdoor &amp; Traveling</a></li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-md-4 static-menu">
+                                                                                        <div class="menu">
+                                                                                            <ul>
+                                                                                                <li>
+                                                                                                    <a href="index.html#"  class="main-menu">Camping &amp; Hiking</a>
+                                                                                                    <ul>
+                                                                                                        <li><a href="index.html#" >Earings</a></li>
+                                                                                                        <li><a href="index.html#" >Shaving &amp; Hair Removal</a></li>
+                                                                                                        <li><a href="index.html#" >Salon &amp; Spa Equipment</a></li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                                <li>
+                                                                                                    <a href="index.html#" class="main-menu">Smartphone &amp; Tablets</a>
+                                                                                                    <ul>
+                                                                                                        <li><a href="index.html#" >Sports &amp; Outdoors</a></li>
+                                                                                                        <li><a href="index.html#" >Bath &amp; Body</a></li>
+                                                                                                        <li><a href="index.html#" >Gadgets &amp; Auto Parts</a></li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-md-4 static-menu">
+                                                                                        <div class="menu">
+                                                                                            <ul>
+                                                                                                <li>
+                                                                                                    <a href="index.html#"  class="main-menu">Bags, Holiday Supplies</a>
+                                                                                                    <ul>
+                                                                                                        <li><a href="index.html#" onclick="window.location = '18_46';">Battereries &amp; Chargers</a></li>
+                                                                                                        <li><a href="index.html#" onclick="window.location = '24_64';">Bath &amp; Body</a></li>
+                                                                                                        <li><a href="index.html#" onclick="window.location = '18_45';">Headphones, Headsets</a></li>
+                                                                                                        <li><a href="index.html#" onclick="window.location = '18_30';">Home Audio</a></li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="item-vertical">
+                                                                <p class="close-menu"></p>
+                                                                <a href="index.html#" class="clearfix">                                                                   
+                                                                    <span>Oil Fluids</span>                                                                    
+                                                                </a>
+                                                            </li>
+                                                            <li class="item-vertical  style1 with-sub-menu hover">
+                                                                <p class="close-menu"></p>
+                                                                <a href="index.html#" class="clearfix">
+                                                                    <span class="label"></span>                                                                    
+                                                                    <span>Smart Devices</span>                                                                     
+                                                                    <b class="fa-angle-right"></b>
+                                                                </a>
+                                                                <div class="sub-menu" data-subwidth="40" >
+                                                                    <div class="content">
+                                                                        <div class="row">
+                                                                            <div class="col-md-6">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12 static-menu">
+                                                                                        <div class="menu">
+                                                                                            <ul>
+                                                                                                <li><a href="index.html#" class="main-menu">Smartphone</a>
+                                                                                                    <ul>
+                                                                                                        <li><a href="index.html#">Esdipiscing</a>
+                                                                                                        </li>
+                                                                                                        <li><a href="index.html#">Scanners</a>
+                                                                                                        </li>
+                                                                                                        <li><a href="index.html#">Apple</a>
+                                                                                                        </li>
+                                                                                                        <li><a href="index.html#">Dell</a>
+                                                                                                        </li>
+                                                                                                        <li><a href="index.html#">Scanners</a>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                                <li><a href="index.html#" class="main-menu">Electronics</a>
+                                                                                                    <ul>
+                                                                                                        <li><a href="index.html#">Asdipiscing</a>
+                                                                                                        </li>
+                                                                                                        <li><a href="index.html#">Diam sit</a>
+                                                                                                        </li>
+                                                                                                        <li><a href="index.html#">Labore et</a>
+                                                                                                        </li>
+                                                                                                        <li><a href="index.html#">Monitors</a>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-6">
+                                                                                <div class="row banner">
+                                                                                    <a href="index.html#">
+                                                                                        <img src="{% static 'image/catalog/menu/megabanner/vbanner1.png' %}" alt="banner1">
+                                                                                        </a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            <li class="item-vertical with-sub-menu hover">
+                                                                <p class="close-menu"></p>
+                                                                <a href="index.html#" class="clearfix">                                                                    
+                                                                    <span>Paintworks</span>
+                                                                    <b class="fa-angle-right"></b>
+                                                                </a>
+                                                                <div class="sub-menu" data-subwidth="60" >
+                                                                    <div class="content" >
+                                                                        <div class="row">
+                                                                            <div class="col-md-12">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-4 static-menu">
+                                                                                        <div class="menu">
+                                                                                            <ul>
+                                                                                                <li>
+                                                                                                    <a href="index.html#" class="main-menu">Car Alarms and Security</a>
+                                                                                                    <ul>
+                                                                                                        <li><a href="index.html#" >Car Audio &amp; Speakers</a></li>
+                                                                                                        <li><a href="index.html#" >Gadgets &amp; Auto Parts</a></li>
+                                                                                                        <li><a href="index.html#" >Gadgets &amp; Auto Parts</a></li>
+                                                                                                        <li><a href="index.html#" >Headphones, Headsets</a></li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                                <li>
+                                                                                                    <a href="https://demo.smartaddons.com/templates/html/autoparts/24" onclick="window.location = '24';" class="main-menu">Health &amp; Beauty</a>
+                                                                                                    <ul>
+                                                                                                        <li>
+                                                                                                            <a href="index.html#" >Home Audio</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="index.html#" >Helicopters &amp; Parts</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="index.html#" >Outdoor &amp; Traveling</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="index.html#">Toys &amp; Hobbies</a>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-md-4 static-menu">
+                                                                                        <div class="menu">
+                                                                                            <ul>
+                                                                                                <li>
+                                                                                                    <a href="index.html#"  class="main-menu">Electronics</a>
+                                                                                                    <ul>
+                                                                                                        <li>
+                                                                                                            <a href="index.html#">Earings</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="index.html#" >Salon &amp; Spa Equipment</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="index.html#" >Shaving &amp; Hair Removal</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="index.html#">Smartphone &amp; Tablets</a>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                                <li>
+                                                                                                    <a href="index.html#"  class="main-menu">Sports &amp; Outdoors</a>
+                                                                                                    <ul>
+                                                                                                        <li>
+                                                                                                            <a href="index.html#" >Flashlights &amp; Lamps</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="index.html#" >Fragrances</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="index.html#" >Fishing</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="index.html#" >FPV System &amp; Parts</a>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-md-4 static-menu">
+                                                                                        <div class="menu">
+                                                                                            <ul>
+                                                                                                <li>
+                                                                                                    <a href="index.html#" class="main-menu">More Car Accessories</a>
+                                                                                                    <ul>
+                                                                                                        <li>
+                                                                                                            <a href="index.html#" >Lighter &amp; Cigar Supplies</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="index.html#" >Mp3 Players &amp; Accessories</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="index.html#" >Men Watches</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="index.html#" >Mobile Accessories</a>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                                <li>
+                                                                                                    <a href="index.html#" class="main-menu">Gadgets &amp; Auto Parts</a>
+                                                                                                    <ul>
+                                                                                                        <li>
+                                                                                                            <a href="index.html#" >Gift &amp; Lifestyle Gadgets</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="index.html#" >Gift for Man</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="index.html#" >Gift for Woman</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="index.html#" >Gift for Woman</a>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="item-vertical css-menu with-sub-menu hover">
+                                                                <p class="close-menu"></p>
+                                                                <a href="index.html#" class="clearfix">                                                                                                                                    
+                                                                    <span>Replacement Parts</span>
+                                                                    <b class="fa-angle-right"></b>
+                                                                </a>
+                                                                <div class="sub-menu" data-subwidth="20">
+                                                                    <div class="content" >
+                                                                        <div class="row">
+                                                                            <div class="col-sm-12">
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-12 hover-menu">
+                                                                                        <div class="menu">
+                                                                                            <ul>
+                                                                                                <li>
+                                                                                                    <a href="index.html#" class="main-menu">Headphones, Headsets</a>
+                                                                                                </li>
+                                                                                                <li>
+                                                                                                    <a href="index.html#" class="main-menu">Home Audio</a>
+                                                                                                </li>
+                                                                                                <li>
+                                                                                                    <a href="index.html#" class="main-menu">Health &amp; Beauty</a>
+                                                                                                </li>
+                                                                                                <li>
+                                                                                                    <a href="index.html#" class="main-menu">Helicopters &amp; Parts</a>
+                                                                                                </li>
+                                                                                                <li>
+                                                                                                    <a href="index.html#" class="main-menu">Helicopters &amp; Parts</a>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="item-vertical">
+                                                                <p class="close-menu"></p>
+                                                                <a href="index.html#" class="clearfix">                                                                    
+                                                                    <span>Tool & equipments</span>                                                                    
+                                                                </a>
+                                                            </li>
+                                                            <li class="item-vertical">
+                                                                <p class="close-menu"></p>
+                                                                <a href="index.html#" class="clearfix">                                                                    
+                                                                    <span>Wheels & Tires</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="item-vertical">
+                                                                <p class="close-menu"></p>
+                                                                <a href="index.html#" class="clearfix">                                                                    
+                                                                    <span>Car Parts</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="item-vertical" >
+                                                                <p class="close-menu"></p>
+                                                                <a href="index.html#" class="clearfix">                                                                    
+                                                                    <span>Gaming Toys</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="item-vertical" >
+                                                                <p class="close-menu"></p>                                                                
+                                                                <a href="index.html#" class="clearfix">
+                                                                    <span>Baby Car Seats</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="item-vertical">
+                                                                <p class="close-menu"></p>
+                                                                <a href="index.html#" class="clearfix">                                                                    
+                                                                    <span>Motobike Care</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="item-vertical" style="display: none;">
+                                                                <p class="close-menu"></p>
+                                                                <a href="index.html#" class="clearfix">                                                                     
+                                                                    <span>Jewelry &amp; Watches</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="item-vertical" style="display: none;">
+                                                                <p class="close-menu"></p>
+                                                                <a href="index.html#" class="clearfix">                                                                    
+                                                                    <span>Home &amp; Lights</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="item-vertical" style="display: none;">
+                                                                <p class="close-menu"></p>
+                                                                <a href="index.html#" class="clearfix">                                                                    
+                                                                    <span>Metallurgy</span>
+                                                                </a>
+                                                            </li>
+                                                           
+                                                            <!-- <li class="loadmore">
+                                                                <i class="fa fa-plus-square-o"></i>
+                                                                <span class="more-view">More Categories</span>
+                                                            </li> -->
+                                                                
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </nav>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
+                        <div class="main-menu-w">
+                            <div class="responsive so-megamenu megamenu-style-dev">
+                                <nav class="navbar-default">
+                                    <div class=" container-megamenu  horizontal open ">
+                                        <div class="navbar-header">
+                                            <button type="button" id="show-megamenu" data-toggle="collapse" class="navbar-toggle">
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                            </button>
+                                        </div>
+                                        
+                                        <div class="megamenu-wrapper">
+                                            <span id="remove-megamenu" class="fa fa-times"></span>
+                                            <div class="megamenu-pattern">
+                                                <div class="container-mega">
+                                                    <ul class="megamenu" data-transition="slide" data-animationtime="250">
+                                                        <li class="home hover">
+                                                            <a href="{% url 'main:index' %}">Главная</a>
+                                                        </li>
+                                                        <li class="with-sub-menu hover">
+                                                            <p class="close-menu"></p>
+                                                            <a href="{% url 'main:about' %}" class="clearfix">
+                                                                <strong>О нас</strong>                                                          
+                                                                <b class="caret"></b>
+                                                            </a>
+                                                        </li>
+                                                        <li class="with-sub-menu hover">
+                                                            <p class="close-menu"></p>
+                                                            <a href="{% url 'main:shop' %} " class="clearfix">
+                                                                <strong>Магазин</strong>
+                                                                <b class="caret"></b>
+                                                            </a>
+                                                        </li>
+                                                        <li class="with-sub-menu hover">
+                                                            <p class="close-menu"></p>
+                                                            <a href="category.html" class="clearfix">
+                                                                <strong>Категории</strong>
+                                                                <b class="caret"></b>
+                                                            </a>
+                                                            <!-- <div class="sub-menu" style="width: 100%; display: none;">
+                                                                <div class="content">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-12">
+                                                                            <div class="row">
+                                                                                <div class="col-md-3 img img1">
+                                                                                    <a href="index.html#"><img src="image/catalog/menu/megabanner/image-1.jpg" alt="banner1"></a>
+                                                                                </div>
+                                                                                <div class="col-md-3 img img2">
+                                                                                    <a href="index.html#"><img src="image/catalog/menu/megabanner/image-2.jpg" alt="banner2"></a>
+                                                                                </div>
+                                                                                <div class="col-md-3 img img3">
+                                                                                    <a href="index.html#"><img src="image/catalog/menu/megabanner/image-3.jpg" alt="banner3"></a>
+                                                                                </div>
+                                                                                <div class="col-md-3 img img4">
+                                                                                    <a href="index.html#"><img src="image/catalog/menu/megabanner/image-4.jpg" alt="banner4"></a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-md-3">
+                                                                            <a href="index.html#" class="title-submenu">Automotive</a>
+                                                                            <div class="row">
+                                                                                <div class="col-md-12 hover-menu">
+                                                                                    <div class="menu">
+                                                                                        <ul>
+                                                                                            <li><a href="index.html#"  class="main-menu">Car Alarms and Security</a></li>
+                                                                                            <li><a href="index.html#"  class="main-menu">Car Audio &amp; Speakers</a></li>
+                                                                                            <li><a href="index.html#"  class="main-menu">Gadgets &amp; Auto Parts</a></li>
+                                                                                            <li><a href="index.html#"  class="main-menu">More Car Accessories</a></li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-3">
+                                                                            <a href="index.html#" class="title-submenu">Funitures</a>
+                                                                            <div class="row">
+                                                                                <div class="col-md-12 hover-menu">
+                                                                                    <div class="menu">
+                                                                                        <ul>
+                                                                                            <li><a href="index.html#"  class="main-menu">Bathroom</a></li>
+                                                                                            <li><a href="index.html#"  class="main-menu">Bedroom</a></li>
+                                                                                            <li><a href="index.html#"  class="main-menu">Decor</a></li>
+                                                                                            <li><a href="index.html#"  class="main-menu">Living room</a></li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-3">
+                                                                            <a href="index.html#" class="title-submenu">Jewelry &amp; Watches</a>
+                                                                            <div class="row">
+                                                                                <div class="col-md-12 hover-menu">
+                                                                                    <div class="menu">
+                                                                                        <ul>
+                                                                                            <li><a href="index.html#"  class="main-menu">Earings</a></li>
+                                                                                            <li><a href="index.html#"  class="main-menu">Wedding Rings</a></li>
+                                                                                            <li><a href="index.html#"  class="main-menu">Men Watches</a></li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-3">
+                                                                            <a href="index.html#" class="title-submenu">Electronics</a>
+                                                                            <div class="row">
+                                                                                <div class="col-md-12 hover-menu">
+                                                                                    <div class="menu">
+                                                                                        <ul>
+                                                                                            <li><a href="index.html#"  class="main-menu">Computer</a></li>
+                                                                                            <li><a href="index.html#"  class="main-menu">Smartphone</a></li>
+                                                                                            <li><a href="index.html#"  class="main-menu">Tablets</a></li>
+                                                                                            <li><a href="index.html#"  class="main-menu">Monitors</a></li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div> -->
+                                                        </li>
+                                                        
+                                                        <li class="">
+                                                            <p class="close-menu"></p>
+                                                            <a href="main:cart" class="clearfix">
+                                                                <strong>Корзина</strong>
+                                             
+                                                            </a>
+                                                
+                                                        </li>
+                                                        <li class="">
+                                                            <p class="close-menu"></p>
+                                                            <a href="{% url 'main:contact' %}" class="clearfix">
+                                                                <strong>Контакты</strong>
+                                                                <span class="label"></span>
+                                                            </a>
+                                                        </li>
+                                                        
+                                                        
+                                                    </ul>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+
+        </div>
+
+    </header>
+    <!-- //Header Container  -->

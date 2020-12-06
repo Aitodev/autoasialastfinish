@@ -1,0 +1,150 @@
+{% extends 'wrapper.html' %}
+{% load static %}
+{% block title %}Продукт | autoasiakg{% endblock %}
+{% block content %}
+
+
+<body class="res layout-subpage layout-1 banners-effect-5 product-details">
+    <div id="wrapper" class="wrapper-fluid">
+    
+    {% include 'header.html' %}
+    <!-- //Header Container  -->
+
+    <!-- Main Container  -->
+    <div class="main-container container">
+        <ul class="breadcrumb">
+            <li><a href="{% url 'main:index' %}"><i class="fa fa-home"></i></a></li>
+            <li><a href="product-v2.html#">Детальная страница продуктов</a></li>
+            <li><a href="product-v2.html#">{{ product.name }}</a></li>
+        </ul>
+        
+        <div class="row">
+
+            <!--Middle Part Start-->
+            <div id="content" class="col-md-9 col-sm-8">
+                
+                <div class="product-view">
+                    <div class="left-content-product">
+                        <div class="row">
+                            <div class="content-product-right col-md-6 col-sm-12 col-xs-12">
+                                <div class="title-product">
+                                    <h1>{{ product.name }}</h1>
+                                </div>
+                                <!-- Review ---->
+                                
+
+                                <div class="product-label form-group">
+                                    <div class="product_page_price price" itemprop="offerDetails" itemscope="" itemtype="http://data-vocabulary.org/Offer">
+                                        {% if product.price_disc %}
+                                            <span class="price-new" itemprop="price">{{ product.price }} сомов</span>
+                                            <span class="price-old">{{ product.price_disc }} сомов</span>
+                                        {% else %}
+                                            <span class="price-new" itemprop="price">{{ product.price }} сомов</span>
+                                        {% endif %}
+                                    </div>
+                                    <div class="stock"><span>В наличии:</span>
+                                        {% if product.new == True %}
+                                            <span class="status-stock">В наличии</span>
+                                        {% else %}
+                                            <span>Нету в наличии</span>
+                                        {% endif %}
+                                        </div>
+                                </div>
+
+                               
+
+                                <div class="short_description form-group">
+                                    <h4>Описание продукта:</h4>
+                                    {{ product.description }}
+                                </div>
+                                <div id="product">
+
+                                    <div class="form-group box-info-product">
+                                        <form action="{% url 'cart:cart_add' product.id %}" method="POST">
+                                        <div class="option quantity">
+                                            <div class="input-group quantity-control" unselectable="on" style="-webkit-user-select: none;">
+                                                <label>Количество</label>
+                                                <input class="form-control" type="text" name="quantity"
+                                                value="1">
+                                                <input type="hidden" name="product_id" value="50">
+                                                <span class="input-group-addon product_quantity_down">−</span>
+                                                <span class="input-group-addon product_quantity_up">+</span>
+                                                {{ cart_product_form }}
+                                                {% csrf_token %}
+                                                <input type="submit" value="+ В корзину">
+                                            </div>
+                                        </div>
+                                        </form>
+                                        <!-- <div class="cart">
+                                            <input type="submit" data-toggle="tooltip" title="" value="В корзину" data-loading-text="Loading..." id="button-cart" class="btn btn-mega btn-lg" onclick="cart.add('42', '1');" data-original-title="В корзину">
+                                        </div> -->
+                                    </div>
+
+                                </div>
+                                <!-- end box info product -->
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                
+                </div>
+                
+                <!-- Bestproduct Tabs -->
+                <div class="producttab ">
+                    <div class="tabsslider horizontal-tabs  col-xs-12">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="product-v2.html#tab-1">Описание</a></li>
+                        </ul>
+                        <div class="tab-content col-xs-12">
+                            <div id="tab-1" class="tab-pane fade active in">
+                                <p>{{ product.description }}</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //Bestproduct Tabs -->
+                
+                
+
+                <!-- end Related  Bestproducts-->
+
+        
+
+                
+            </div>
+            <!--Middle Part End-->
+            <!--Left Part Start -->
+            <aside class="col-sm-4 col-md-3 content-aside" id="column-left">
+                <div class="module category-style">
+                    <h3 class="modtitle">Категории</h3>
+                    <div class="modcontent">
+                        <div class="box-category">
+                            {% for brand in brands %}
+                            <ul id="cat_accordion" class="list-group">
+                                <li class=""><a href="{% url 'main:automodels' brand.id %}" class="cutom-parent">{{ brand.name }}</a>  <span class="dcjq-icon"></span></li>
+                            </ul>
+                            {% endfor %}
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </aside>
+            <!--Left Part End -->
+        </div>
+        
+    </div>
+    <!-- //Main Container -->
+    
+
+    {% include 'footer.html' %}
+
+    </div>
+    
+
+</div>      
+
+</body>
+{% endblock %}
